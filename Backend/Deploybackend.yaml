@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: <region-key>/<tenancy-namespace>/linuxtips/back:latest
+        image: [Image-Name]:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
