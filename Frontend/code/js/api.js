@@ -4,11 +4,14 @@ document.getElementById('clickbutton').onclick = function(e){
     getdados();
   };
 
-input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        getdados();
-    }
-  });
+  var input = document.getElementById("cep");
+
+  input.addEventListener("keyup", function(event) {
+      if (event.key === 'Enter') {
+          event.preventDefault();
+          document.getElementById("clickbutton").click();
+      }
+    });
 
 async function respostaAPI() {
     const cep = document.getElementById('cep').value
